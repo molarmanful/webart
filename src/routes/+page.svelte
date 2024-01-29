@@ -2,6 +2,10 @@
   let m = [['./a', 'Tutorial A']]
 </script>
 
+<svelte:head>
+  <title>WEB ART STUFF</title>
+</svelte:head>
+
 <div class="flex-(~ justify-center items-center) screen">
   <div class="p-16 b-(1 solid black)">
     <h1>CHICANERY</h1>
