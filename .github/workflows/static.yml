@@ -1,18 +1,16 @@
+---
 name: Deploy to Pages
 on:
   push:
-    branches: ["main"]
+    branches: [main]
   workflow_dispatch:
-
 permissions:
   contents: read
   pages: write
   id-token: write
-
 concurrency:
-  group: "pages"
+  group: pages
   cancel-in-progress: false
-
 jobs:
   deploy:
     environment:
@@ -30,7 +28,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '*'
-          cache: 'pnpm'
+          cache: pnpm
       - name: Install dependencies
         run: pnpm i
       - name: Build
@@ -41,7 +39,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
-          path: './build'
+          path: ./build
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
