@@ -1,4 +1,5 @@
 import js from '@eslint/js'
+import unocss from '@unocss/eslint-config/flat'
 import prettier from 'eslint-config-prettier'
 import imprt from 'eslint-plugin-import'
 import svelte from 'eslint-plugin-svelte'
@@ -103,6 +104,8 @@ export default [
       'no-unused-vars': 1,
     },
   },
+
+  unocss,
 
   prettier,
 ]
