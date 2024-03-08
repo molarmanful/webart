@@ -2,7 +2,8 @@
   let m = [
     ['./a', 'Tutorial A'],
     ['./b', 'Tutorial B'],
-    ['./c', 'Tutorial C'],
+    ['./d', 'Tutorial D'],
+    ['./e', 'Tutorial E'],
   ]
 </script>
 
