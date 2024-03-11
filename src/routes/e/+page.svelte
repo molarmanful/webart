@@ -47,7 +47,6 @@
         let span = document.createElement('span')
         span.style.fontFamily = randfnt()
         span.dataset.factor = Math.random() * 4 - 2
-        span.dataset.hs = faker.color.hsl().slice(0, 2)
         span.textContent = c
         el.append(span)
       }
