@@ -1,10 +1,11 @@
 <script>
   import { onMount } from 'svelte'
 
-  import { page } from '$app/stores'
+  import { browser } from '$app/environment'
 
   let el
-  let str = $page.url.searchParams.get('str') || ''
+  let str = ''
+  if (browser) str = new URL(location).searchParams.get('str') || ''
 
   onMount(() => {
     el.focus()
@@ -22,7 +23,7 @@
     placeholder="type here to start..."
     on:input={() => {
       requestAnimationFrame(() => {
-        location.href = '/d?str=' + encodeURIComponent(str)
+        location.href = '?str=' + encodeURIComponent(str)
       })
     }}
     bind:value={str}
